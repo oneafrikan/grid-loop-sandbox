@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/ghbot/grid-loop-sandbox/loop/hooks/post-commit-review.sh"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/ghbot/grid-loop-sandbox/loop/hooks/guard-main-push.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
